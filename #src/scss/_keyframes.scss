@@ -1,0 +1,17 @@
+@keyframes jump {
+  from {
+    transform: translateY(0);
+  }
+  20% {
+    transform: translateY(15px);
+  }
+  40% {
+    transform: translateY(0);
+  }
+  60% {
+    transform: translateY(15px);
+  }
+  80% {
+    transform: translateY(0);
+  }
+}

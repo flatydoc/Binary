@@ -1,0 +1,93 @@
+.header {
+  width: 100%;
+
+  background-color: rgb(55, 117, 155);
+  background-image: url(/img/bg.jpg);
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+
+  &__container {
+    @extend %flexsettings;
+    flex-direction: column;
+
+    min-height: 700px;
+  }
+
+  &__title {
+    position: relative;
+
+    font-size: 35px;
+    color: white;
+
+    &::after {
+      @extend %titleborder;
+
+      height: 3px;
+
+      background-color: white;
+    }
+  }
+
+  &__text {
+    font-size: 25px;
+    font-weight: 400;
+    line-height: 30px;
+    text-transform: lowercase;
+  }
+
+  &__button {
+    border: 2px solid white;
+
+    color: white;
+
+    &::after {
+      content: url(/img/icons/arrow.svg);
+
+      position: absolute;
+      top: 140%;
+      left: 25%;
+
+      width: 90px;
+
+      animation: jump 2s infinite;
+    }
+
+    &:hover,
+    &:focus {
+      color: black;
+
+      background-color: white;
+    }
+
+    &:active {
+      opacity: 0.5;
+    }
+  }
+
+  &__navigation {
+    height: 60px;
+    border-bottom: 2px solid rgba(128, 128, 128, 0.3);
+
+    background-color: white;
+  }
+
+  &__link {
+    margin: 0 30px 0 30px;
+
+    color: inherit;
+
+    &:first-child {
+      font-weight: 700;
+    }
+
+    &:hover,
+    &:focus {
+      color: rgba(139, 113, 48, 0.5);
+    }
+
+    &:active {
+      opacity: 0.5;
+    }
+  }
+}

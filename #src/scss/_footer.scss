@@ -1,0 +1,30 @@
+.footer {
+  @extend %flexsettings;
+  flex-direction: column;
+
+  min-height: 250px;
+  background-color: rgb(43, 43, 43);
+
+  &__navigation {
+    @extend %flexsettings;
+
+    width: 30%;
+
+    &-link {
+      color: darkgray;
+
+      &:hover,
+      &:focus {
+        color: white;
+      }
+
+      &:active {
+        opacity: 0.3;
+      }
+    }
+  }
+
+  &__coopyright {
+    color: rgb(97, 97, 97);
+  }
+}

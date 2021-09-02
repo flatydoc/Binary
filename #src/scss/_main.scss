@@ -1,0 +1,259 @@
+.main {
+  min-height: 500px;
+
+  &__title {
+    position: relative;
+
+    color: black;
+    font-size: 30px;
+    letter-spacing: 5px;
+
+    &::after {
+      @extend %titleborder;
+
+      height: 1px;
+
+      background-color: black;
+    }
+  }
+
+  .about {
+    @extend %flexsettings;
+    flex-direction: column;
+
+    margin: 0 auto;
+    width: 70%;
+    min-height: 700px;
+
+    font-weight: 300;
+    line-height: 25px;
+
+    p {
+      text-align: center;
+    }
+
+    &__columns {
+      @extend %flexsettings;
+
+      width: 100%;
+    }
+
+    &__item {
+      @extend %flexsettings;
+      flex-direction: column;
+
+      width: 33.333%;
+      min-height: 300px;
+
+      &-icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        width: 90px;
+        height: 90px;
+        border: 2px solid rgba(128, 128, 128, 0.3);
+        border-radius: 50%;
+
+        &:hover {
+          box-shadow: 0 0 10px rgba(139, 113, 48, 0.5);
+        }
+      }
+
+      &-title {
+        font-size: 20px;
+        color: black;
+      }
+    }
+  }
+
+  .portfolio {
+    @extend %flexsettings;
+    flex-direction: column;
+
+    min-height: 700px;
+
+    background-color: rgba(128, 128, 128, 0.1);
+
+    &__link {
+      margin: 0 30px 0 30px;
+
+      color: inherit;
+      text-transform: uppercase;
+
+      &:hover {
+        color: rgba(139, 113, 48, 0.5);
+      }
+
+      &:focus,
+      &:active {
+        font-weight: 700;
+        color: rgba(139, 113, 48, 0.5);
+      }
+    }
+  }
+
+  &__button {
+    border: 2px solid black;
+
+    &:hover,
+    &:focus {
+      color: white;
+
+      background-color: black;
+    }
+  }
+
+  .partners {
+    @extend %flexsettings;
+    flex-direction: column;
+
+    min-height: 300px;
+
+    background-color: rgb(55, 117, 155);
+    background-image: url(/img/bg.jpg);
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+
+    &__title {
+      color: white;
+      font-weight: 300;
+      font-size: 30px;
+    }
+
+    &__list {
+      @extend %flexsettings;
+
+      width: 50%;
+    }
+  }
+
+  .contact {
+    @extend %flexsettings;
+    flex-direction: column;
+
+    min-height: 700px;
+
+    &__wrapper {
+      display: flex;
+      justify-content: space-around;
+
+      width: 70%;
+      min-height: 350px;
+    }
+
+    &__form {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      justify-content: space-between;
+
+      width: 45%;
+
+      label {
+        display: block;
+
+        margin-bottom: 10px;
+
+        font-weight: 700;
+        color: black;
+        text-transform: uppercase;
+      }
+
+      &-wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        width: 100%;
+        height: 80%;
+      }
+
+      .container {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      &-name input,
+      &-email input {
+        width: 160px;
+        height: 40px;
+        padding-left: 5px;
+        padding-right: 5px;
+      }
+
+      &-message {
+        width: 100%;
+
+        textarea {
+          width: 100%;
+          height: 140px;
+          padding: 10px;
+          resize: none;
+        }
+      }
+    }
+
+    &__information {
+      width: 45%;
+
+      color: black;
+      font-weight: 300;
+      line-height: 25px;
+
+      &-name {
+        margin-top: 25px;
+        margin-bottom: 10px;
+        font-weight: 700;
+      }
+
+      &-email {
+        margin-top: 10px;
+      }
+
+      &-link {
+        color: black;
+        font-weight: 400;
+
+        &:hover,
+        &:focus {
+          text-decoration: underline;
+        }
+      }
+    }
+
+    .social {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      width: 20%;
+
+      &__link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        width: 30px;
+        height: 30px;
+        border: 1px solid black;
+        border-radius: 50%;
+
+        &:hover,
+        &:focus {
+          background-color: royalblue;
+        }
+
+        &:hover .social__icon path,
+        &:focus .social__icon path {
+          fill: white;
+        }
+
+        &:active {
+          opacity: 0.5;
+        }
+      }
+    }
+  }
+}
