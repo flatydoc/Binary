@@ -1,5 +1,19 @@
 @charset "UTF-8";
-@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;900&display=swap");
+@font-face {
+  font-family: "Lato";
+  /* Имя шрифта */
+  src: url(../fonts/Lato-Black.ttf) format("truetype");
+  /* Путь к файлу со шрифтом */
+}
+
+@font-face {
+  font-family: "Lato";
+  /* Имя шрифта */
+  font-weight: 600;
+  src: url(../fonts/Lato-Bold.ttf) format("truetype");
+  /* Путь к файлу со шрифтом */
+}
+
 /*Обнуление*/
 * {
   padding: 0;

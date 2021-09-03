@@ -1,3 +1,5 @@
+const rename = require("gulp-rename");
+
 let project_folder = "dist";
 let source_folder = "#src";
 
@@ -53,20 +55,24 @@ function html() {
 }
 
 function css() {
-  return src(path.src.css)
-    .pipe(
-      scss({
-        outputStyle: "expanded",
-      })
-    )
-    .pipe(
-      autoprefixer({
-        overrideBrowserslist: ["last 5 versions"],
-        cascade: true,
-      })
-    )
-    .pipe(dest(path.build.css))
-    .pipe(browsersync.stream());
+  return (
+    src(path.src.css)
+      .pipe(
+        scss({
+          outputStyle: "expanded",
+        })
+      )
+      //.pipe(group_media())
+      .pipe(
+        autoprefixer({
+          overrideBrowserslist: ["last 5 versions"],
+          cascade: true,
+        })
+      )
+      .pipe(clean_css())
+      .pipe(dest(path.build.css))
+      .pipe(browsersync.stream())
+  );
 }
 
 function watchFiles(params) {
