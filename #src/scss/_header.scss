@@ -11,7 +11,7 @@
     @extend %flexsettings;
     flex-direction: column;
 
-    min-height: 700px;
+    min-height: 100vh;
   }
 
   &__title {
@@ -19,6 +19,7 @@
 
     font-size: 35px;
     color: white;
+    width: 80%;
 
     &::after {
       @extend %titleborder;
@@ -29,7 +30,7 @@
     }
   }
 
-  &__text {
+  &__subtitle {
     font-size: 25px;
     font-weight: 400;
     line-height: 30px;
@@ -69,13 +70,16 @@
     height: 60px;
     border-bottom: 2px solid rgba(128, 128, 128, 0.3);
 
+    text-align: center;
+
     background-color: white;
   }
 
   &__link {
-    margin: 0 30px 0 30px;
+    margin: 0 20px 0 20px;
 
     color: inherit;
+    white-space: nowrap;
 
     &:first-child {
       font-weight: 700;
