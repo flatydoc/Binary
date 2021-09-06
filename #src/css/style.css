@@ -344,7 +344,24 @@ ul {
   color: rgba(139, 113, 48, 0.5);
 }
 
+.main .portfolio__list {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 20px;
+  width: 60%;
+}
+
+.main .portfolio__item {
+  width: 45%;
+  height: 200px;
+  margin: 15px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background-color: rgba(211, 211, 211, 0.5);
+}
+
 .main__button {
+  margin-bottom: 20px;
   border: 2px solid black;
 }
 
@@ -476,12 +493,11 @@ ul {
 }
 
 .main .contact__information-name {
-  margin-top: 25px;
   margin-bottom: 10px;
   font-weight: 700;
 }
 
-.main .contact__information-email {
+.main .contact__information-email, .main .contact__information-name {
   margin-top: 10px;
 }
 
@@ -578,7 +594,7 @@ ul {
   width: 100px;
 }
 
-.header__container, .main .about, .main .about__item, .main .portfolio, .main .partners, .main .partners__list, .main .contact, .footer, .footer__navigation {
+.header__container, .main .about, .main .about__item, .main .portfolio, .main .portfolio__list, .main .partners, .main .partners__list, .main .contact, .footer, .footer__navigation {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -608,6 +624,8 @@ body {
 
 .button {
   position: relative;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   width: 180px;
   height: 50px;
   text-transform: uppercase;

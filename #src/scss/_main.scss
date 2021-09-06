@@ -95,9 +95,27 @@
         color: rgba(139, 113, 48, 0.5);
       }
     }
+
+    &__list {
+      @extend %flexsettings;
+      flex-wrap: wrap;
+
+      margin: 20px;
+      width: 60%;
+    }
+
+    &__item {
+      width: 45%;
+      height: 200px;
+      margin: 15px;
+      box-sizing: border-box;
+
+      background-color: rgba(211, 211, 211, 0.5);
+    }
   }
 
   &__button {
+    margin-bottom: 20px;
     border: 2px solid black;
 
     &:hover,
@@ -211,12 +229,12 @@
       line-height: 25px;
 
       &-name {
-        margin-top: 25px;
         margin-bottom: 10px;
         font-weight: 700;
       }
 
-      &-email {
+      &-email,
+      &-name {
         margin-top: 10px;
       }
 
