@@ -1,9 +1,21 @@
-@import "_fonts";
 @import "_normalize";
 @import "_keyframes";
 @import "_header";
 @import "_main";
 @import "_footer";
+
+@mixin font($font_name, $file_name, $weight, $style) {
+  @font-face {
+    font-family: $font_name;
+    font-display: swap;
+    src: url("../fonts/#{$file_name}.woff") format("woff"),
+      url("../fonts/#{$file_name}.woff2") format("woff2");
+    font-weight: #{$weight};
+    font-style: #{$style};
+  }
+}
+
+@import "_fonts";
 
 %titleborder {
   content: "";
@@ -63,8 +75,6 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-
-  text-transform: uppercase;
 }
 
 input,
