@@ -1,14 +1,20 @@
 .main {
   min-height: 500px;
 
+  font-size: 15px;
+
   &__title {
     position: relative;
     margin-top: 50px;
     margin-bottom: 50px;
 
     color: black;
-    font-size: 30px;
+    font-size: 2em;
     letter-spacing: 5px;
+
+    @media (min-width: 2500px) {
+      font-size: 4em;
+    }
 
     &::after {
       @extend %titleborder;
@@ -16,6 +22,19 @@
       height: 1px;
 
       background-color: black;
+
+      @media (min-width: 2500px) {
+        width: 200px;
+      }
+    }
+  }
+
+  &__subtitle {
+    line-height: 30px;
+
+    @media (min-width: 2500px) {
+      font-size: 2em;
+      line-height: 2em;
     }
   }
 
@@ -24,30 +43,38 @@
     flex-direction: column;
 
     margin: 0 auto;
-    width: 80%;
+    width: 100%;
     min-height: 100vh;
 
     font-weight: 300;
-    line-height: 25px;
     text-align: center;
 
     &__columns {
       display: flex;
       align-items: flex-start;
-      justify-content: center;
-      flex-wrap: wrap;
+      justify-content: space-around;
 
       margin-top: 20px;
+      width: 80%;
 
-      width: 100%;
+      line-height: 25px;
+
+      @media (max-width: 1000px) {
+        flex-wrap: wrap;
+      }
     }
 
     &__item {
       @extend %flexsettings;
       flex-direction: column;
 
+      width: 33.333%;
       min-width: 320px;
       min-height: 300px;
+
+      @media (min-width: 2500px) {
+        min-height: 600px;
+      }
 
       &-logo {
         display: flex;
@@ -59,6 +86,11 @@
         border: 2px solid rgba(128, 128, 128, 0.3);
         border-radius: 50%;
 
+        @media (min-width: 2500px) {
+          width: 180px;
+          height: 180px;
+        }
+
         &:hover {
           box-shadow: 0 0 10px rgba(139, 113, 48, 0.5);
         }
@@ -67,6 +99,17 @@
       &-title {
         font-size: 20px;
         color: black;
+
+        @media (min-width: 2500px) {
+          font-size: 2em;
+        }
+      }
+
+      &-text {
+        @media (min-width: 2500px) {
+          font-size: 2em;
+          line-height: 2em;
+        }
       }
     }
   }
@@ -101,11 +144,11 @@
       flex-wrap: wrap;
 
       margin: 20px;
-      width: 60%;
+      width: 70%;
     }
 
     &__item {
-      width: 45%;
+      width: 350px;
       min-width: 250px;
       height: auto;
       margin: 15px;
@@ -147,14 +190,18 @@
     &__title {
       color: white;
       font-weight: 300;
-      font-size: 30px;
+      font-size: 2em;
+
+      @media (min-width: 2500px) {
+        font-size: 4em;
+      }
     }
 
     &__list {
       @extend %flexsettings;
       flex-wrap: wrap;
 
-      width: 80%;
+      width: 70%;
     }
   }
 
@@ -234,6 +281,11 @@
       font-weight: 300;
       line-height: 25px;
 
+      @media (min-width: 2500px) {
+        font-size: 2em;
+        line-height: 1.5em;
+      }
+
       &-name {
         margin-bottom: 10px;
         font-weight: 700;
@@ -272,6 +324,11 @@
         border: 1px solid black;
         border-radius: 50%;
 
+        @media (min-width: 2500px) {
+          width: 60px;
+          height: 60px;
+        }
+
         &:hover,
         &:focus {
           background-color: royalblue;
@@ -284,6 +341,13 @@
 
         &:active {
           opacity: 0.5;
+        }
+      }
+
+      &__icon {
+        @media (min-width: 2500px) {
+          width: 60px;
+          height: 60px;
         }
       }
     }

@@ -127,7 +127,7 @@ function fontsStyle(params) {
     return fs.readdir(path.build.fonts, function (err, items) {
       if (items) {
         let c_fontname;
-        for (var i = 0; i < items.length; i++) {
+        for (let i = 0; i < items.length; i++) {
           let fontname = items[i].split(".");
           fontname = fontname[0];
           if (c_fontname != fontname) {

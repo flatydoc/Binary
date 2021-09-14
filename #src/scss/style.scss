@@ -21,7 +21,7 @@
   content: "";
 
   position: absolute;
-  bottom: -50%;
+  top: 130%;
   left: 50%;
   transform: translateX(-50%);
 
@@ -36,8 +36,13 @@
 
 html,
 body {
+  width: 100%;
   font-family: "Lato", sans-serif;
   color: rgba(0, 0, 0, 0.7);
+
+  @media (max-width: 500px) {
+    width: 100vh;
+  }
 }
 
 .visually-hidden {
@@ -63,6 +68,15 @@ body {
   text-transform: uppercase;
 
   transition: color 0.5s, background-color 0.5s;
+
+  @media (min-width: 2500px) {
+    width: calc(180px * 2);
+    height: calc(50px * 2);
+
+    &__text {
+      font-size: 2em;
+    }
+  }
 }
 
 .title {
@@ -75,6 +89,10 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+
+  @media (min-width: 2500px) {
+    font-size: 2em;
+  }
 }
 
 input,

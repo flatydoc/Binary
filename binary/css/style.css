@@ -36,7 +36,6 @@ html,
 body {
   height: 100%;
   width: 100%;
-  font-size: 100%;
   line-height: 1;
   font-size: 15px;
   -ms-text-size-adjust: 100%;
@@ -162,6 +161,11 @@ ul {
   min-height: 100vh;
 }
 
+.header__logo {
+  width: 195px;
+  height: 123px;
+}
+
 .header__title {
   position: relative;
   font-size: 35px;
@@ -235,6 +239,7 @@ ul {
 
 .main {
   min-height: 500px;
+  font-size: 15px;
 }
 
 .main__title {
@@ -242,7 +247,7 @@ ul {
   margin-top: 50px;
   margin-bottom: 50px;
   color: black;
-  font-size: 30px;
+  font-size: 2em;
   letter-spacing: 5px;
 }
 
@@ -251,16 +256,19 @@ ul {
   background-color: black;
 }
 
+.main__subtitle {
+  line-height: 30px;
+}
+
 .main .about {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
   margin: 0 auto;
-  width: 80%;
+  width: 100%;
   min-height: 100vh;
   font-weight: 300;
-  line-height: 25px;
   text-align: center;
 }
 
@@ -271,13 +279,11 @@ ul {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   margin-top: 20px;
-  width: 100%;
+  width: 80%;
+  line-height: 25px;
 }
 
 .main .about__item {
@@ -285,6 +291,7 @@ ul {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  width: 33.333%;
   min-width: 320px;
   min-height: 300px;
 }
@@ -344,11 +351,11 @@ ul {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   margin: 20px;
-  width: 60%;
+  width: 70%;
 }
 
 .main .portfolio__item {
-  width: 45%;
+  width: 350px;
   min-width: 250px;
   height: auto;
   margin: 15px;
@@ -389,13 +396,13 @@ ul {
 .main .partners__title {
   color: white;
   font-weight: 300;
-  font-size: 30px;
+  font-size: 2em;
 }
 
 .main .partners__list {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  width: 80%;
+  width: 70%;
 }
 
 .main .contact {
@@ -619,7 +626,7 @@ ul {
 .main__title::after {
   content: "";
   position: absolute;
-  bottom: -50%;
+  top: 130%;
   left: 50%;
   -webkit-transform: translateX(-50%);
       -ms-transform: translateX(-50%);
@@ -648,6 +655,7 @@ ul {
 
 html,
 body {
+  width: 100%;
   font-family: "Lato", sans-serif;
   color: rgba(0, 0, 0, 0.7);
 }
@@ -711,7 +719,136 @@ textarea:hover {
   -webkit-box-shadow: 0 0 10px rgba(128, 128, 128, 0.5);
           box-shadow: 0 0 10px rgba(128, 128, 128, 0.5);
 }
+
+@media (min-width: 2500px) {
+  .header__logo {
+    width: calc(195px * 2);
+    height: calc(123px * 2);
+  }
+
+  .header__title {
+    font-size: calc(35px * 2);
+  }
+
+  .header__title::after {
+    width: 200px;
+  }
+
+  .header__subtitle {
+    font-size: calc(25px * 2);
+    line-height: 60px;
+  }
+
+  .header__button::after {
+    width: 180px;
+  }
+
+  .header__navigation {
+    height: 120px;
+  }
+
+  .main__title {
+    font-size: 4em;
+  }
+
+  .main__title::after {
+    width: 200px;
+  }
+
+  .main__subtitle {
+    font-size: 2em;
+    line-height: 2em;
+  }
+
+  .main .about__item {
+    min-height: 600px;
+  }
+
+  .main .about__item-logo {
+    width: 180px;
+    height: 180px;
+  }
+
+  .main .about__item-title {
+    font-size: 2em;
+  }
+
+  .main .about__item-text {
+    font-size: 2em;
+    line-height: 2em;
+  }
+
+  .main .partners__title {
+    font-size: 4em;
+  }
+
+  .main .contact__information {
+    font-size: 2em;
+    line-height: 1.5em;
+  }
+
+  .main .contact .social__link {
+    width: 60px;
+    height: 60px;
+  }
+
+  .main .contact .social__icon {
+    width: 60px;
+    height: 60px;
+  }
+
+  .button {
+    width: calc(180px * 2);
+    height: calc(50px * 2);
+  }
+
+  .button__text {
+    font-size: 2em;
+  }
+
+  .navigation {
+    font-size: 2em;
+  }
+}
+
+@media (max-width: 1000px) {
+  .main .about__columns {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 500px) {
+  html,
+  body {
+    width: 100vh;
+  }
+}
 @supports (-webkit-appearance:none){
 .header{background-image:url(/img/bg.webp)}
 .main .partners{background-image:url(/img/bg.webp)}
+}
+
+ @media (min-width: 2500px){
+
+@supports (-webkit-appearance:none){
+
+}
+
+}
+
+ @media (max-width: 1000px){
+
+@supports (-webkit-appearance:none){
+
+}
+
+}
+
+ @media (max-width: 500px){
+
+@supports (-webkit-appearance:none){
+
+}
+
 }
