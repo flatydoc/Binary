@@ -65,6 +65,20 @@
 
     color: white;
 
+    &:hover,
+    &:focus {
+      color: black;
+    }
+
+    &::before {
+      background-color: white;
+    }
+
+    &:hover::before,
+    &:focus::before {
+      transform: scale(100%);
+    }
+
     &::after {
       content: url(/img/icons/arrow.svg);
 
@@ -79,17 +93,6 @@
       @media (min-width: 2500px) {
         width: 180px;
       }
-    }
-
-    &:hover,
-    &:focus {
-      color: black;
-
-      background-color: white;
-    }
-
-    &:active {
-      opacity: 0.5;
     }
   }
 

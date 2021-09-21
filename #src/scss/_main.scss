@@ -49,6 +49,10 @@
     font-weight: 300;
     text-align: center;
 
+    @media (max-width: 800px) {
+      width: 80%;
+    }
+
     &__columns {
       display: flex;
       align-items: flex-start;
@@ -170,8 +174,15 @@
     &:hover,
     &:focus {
       color: white;
+    }
 
+    &::before {
       background-color: black;
+    }
+
+    &:hover::before,
+    &:focus::before {
+      transform: scale(100%);
     }
   }
 
