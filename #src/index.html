@@ -121,19 +121,24 @@
             enctype="multipart/form-data"
           >
             <div class="contact__form-wrapper">
-              <div class="container">
+              <div class="data">
                 <div class="contact__form-name">
                   <label for="name">your name</label>
-                  <input type="text" id="name" name="name" />
+                  <input type="text" id="name" name="name" required />
                 </div>
                 <div class="contact__form-email">
                   <label for="e-mail">your e-mail</label>
-                  <input type="text" id="e-mail" name="e-mail" />
+                  <input type="text" id="e-mail" name="e-mail" required />
                 </div>
               </div>
               <div class="contact__form-message">
                 <label for="message">message</label>
-                <textarea id="message" name="message" rows="10"></textarea>
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="10"
+                  required
+                ></textarea>
               </div>
             </div>
             <button class="main__button button" type="submit">
